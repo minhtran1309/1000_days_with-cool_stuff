@@ -22,7 +22,13 @@ Start planning my working so I can keep track of my distraction  ( :D lol I got 
 			desc: A GUI tool for easy and smooth visualisation and analysis of Spatial Transcriptomics datasets
 2: in the afternoon, finalize the book chapter: 
 3: Read NY Times for something. 
-Achievement: 
+
+Achievement and Finished: 
+	1.3 finished easily with pip install 
+
+	1.4 a tip is to have R installed or load R module if you use the cluster, it will fail if you didn't load R package. and follow the instruction frkm the github. 
+	
+	1.5 it's quite picky to install stuff in the cluster, evey incident and lesson learnt will be noted in either R_tip, Python_tips.
 
 
 
