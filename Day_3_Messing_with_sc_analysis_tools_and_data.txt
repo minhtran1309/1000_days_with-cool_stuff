@@ -1,0 +1,20 @@
+Oct 4th 2019
+Learned
+Paper in nature generate a wierd citation format for OneNote (.ris). To convert it to bib and cite them in latex one useful online tool can be used https://www.bruot.org/ris2bib/ 
+Goal
+Start planning my working so I can keep track of my distraction  ( :D lol I got distract quite easily)
+1: install 5 apps for a new environment. 
+	Name and link of the apps:
+		1.1 Cell ranger from 10X Genomics: https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/installation
+			desc: Cell Ranger is a set of analysis pipelines that process Chromium single-cell RNA-seq output to align reads, generate feature-barcode matrices and perform clustering and gene expression analysis
+		1.2 Seurat CRAN (R package for) analyse Single Cell: https://satijalab.org/seurat/install.html      -> don't trust the link it is a huge mess, install it last. 
+
+			desc: Seurat is an R package designed for QC, analysis, and exploration of single-cell RNA-seq data. Seurat aims to enable users to identify and interpret sources of heterogeneity from single-cell transcriptomic measurements, and to integrate diverse types of single-cell data.
+		1.3 st_analysis: https://github.com/jfnavarro/st_analysis
+			desc: A toolkit for analysis and visualisation of Spatial Transcriptomics datasets (not a single cell data guys).
+		1.4 st_pipeline: https://github.com/SpatialTranscriptomicsResearch/st_pipeline
+			desc: ST Pipeline contains the tools and scripts needed to process and analyze the raw files generated with the Spatial Transcriptomics method in FASTQ format.
+		1.5 st_viewer: https://github.com/SpatialTranscriptomicsResearch/st_viewer
+			desc: A GUI tool for easy and smooth visualisation and analysis of Spatial Transcriptomics datasets
+
+
