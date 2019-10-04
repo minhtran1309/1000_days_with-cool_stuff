@@ -32,7 +32,7 @@ Achievement and Finished:
 		a problem may occur if you try installing data.table package. Look up note for R_tip
 		Plus: Download the installer here: 
 			https://github.com/jfnavarro/st_viewer/releases
-
+		If for some miracle that your installation work for the first time, then no need to keep reading
 		I want to curse so bad the guy who developed this tool really ruined my day
 		ok we are going to do the hardcore way, why??? becasue the binaries build support 3.4 --> build from source
 		1. create an environment
@@ -45,6 +45,6 @@ Achievement and Finished:
 			5.3 copy it to /opt/ (required root permission)
 			5.4 Make ()
 		6. install R packages
-			If you are still with me to this point LoL. I figured out a better solution. Fooling the app that I have 3.4 (create a directory named 3.4 an copy all the files from 3.5 to it) the directory is: `/Library/Frameworks/R.framework/Versions`
+			If you are still with me to this point LoL. I figured out a better solution. Fooling the app that I have 3.4 (create a directory named 3.4 an copy all the files from 3.5 to it) the directory is: `/Library/Frameworks/R.framework/Versions`. 
 			
 	Completed installing 4 tools today, miss the target. :( 
