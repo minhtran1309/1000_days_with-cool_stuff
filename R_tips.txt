@@ -1,7 +1,15 @@
 #---------------------------------
 #------ R tips and tricks--------
 #--------------------------------
-
+# to install packages to directory
 install.packages("RPackage", lib="/90days/s4596423/st_env")
 #load the package installed locally
 library("myRPackage", lib.loc="/usr/me/local/R/library")
+
+
+#----------------------------------------
+#--------Install Rdata.table in MacOS----
+#----------------------------------------
+install.packages("data.table", type = "binary")
+
+
