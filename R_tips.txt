@@ -1,0 +1,7 @@
+#---------------------------------
+#------ R tips and tricks--------
+#--------------------------------
+
+install.packages("RPackage", lib="/90days/s4596423/st_env")
+#load the package installed locally
+library("myRPackage", lib.loc="/usr/me/local/R/library")
