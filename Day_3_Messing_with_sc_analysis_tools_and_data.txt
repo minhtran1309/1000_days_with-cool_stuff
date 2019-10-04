@@ -29,6 +29,22 @@ Achievement and Finished:
 	1.4 a tip is to have R installed or load R module if you use the cluster, it will fail if you didn't load R package. and follow the instruction frkm the github. 
 	
 	1.5 it's quite picky to install stuff in the cluster, evey incident and lesson learnt will be noted in either R_tip, Python_tips.
+		a problem may occur if you try installing data.table package. Look up note for R_tip
+		Plus: Download the installer here: 
+			https://github.com/jfnavarro/st_viewer/releases
 
-
-
+		I want to curse so bad the guy who developed this tool really ruined my day
+		ok we are going to do the hardcore way, why??? becasue the binaries build support 3.4 --> build from source
+		1. create an environment
+		2. install cmake inside the envir with conda
+		3. install qt inside the envir from conda
+		4. Download QCustomplot
+		5. Download extract and build Armadillo 
+			5.1 in some case there is NO fucking OSX SDK to build with the conda-forge provided compilers. Follow this guy https://stackoverflow.com/questions/55798166/cmake-fails-with-when-attempting-to-compile-simple-test-program
+			5.2 Download 10.11 OSX SDK release
+			5.3 copy it to /opt/ (required root permission)
+			5.4 Make ()
+		6. install R packages
+			If you are still with me to this point LoL. I figured out a better solution. Fooling the app that I have 3.4 (create a directory named 3.4 an copy all the files from 3.5 to it) the directory is: `/Library/Frameworks/R.framework/Versions`
+			
+	Completed installing 4 tools today, miss the target. :( 
