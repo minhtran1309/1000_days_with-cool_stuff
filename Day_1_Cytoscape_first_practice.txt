@@ -1,0 +1,7 @@
+There was a workshop that are splitted into two sections. 
+The first one is the introduction about the basic toolkit in Cytoscape
+Lecture was given by Nick Hamilton (wow he is from the Hamiltion) :"D 
+---TBU
+
+The second section is about very very advance and fancy option in Cytoscape
+---TBU 
