@@ -1,0 +1,33 @@
+we have access to 3 cluster(I am actually waiting for my account the fourth server to be granted access). I know that there are two apps that allow me to keep my session running even when I get disconnected to internet access called tmux and screen. There is screen installed in one cluster but not tmux. I know how to use both of them but prefer to use tmux since it looks cooler. The problem with using cluster is that you don't a root permission which limits you to do a lot of installation. However in a possitive side, it's a chance for me to learn how to install stuffs without being a root user. 
+Enough for the instruction:
+First of course as usual, google my problem. From my experience the top 2 results is not enough. You may want to use this guy instuction: https://gist.github.com/ryin/3106801 ...
+it's quite outdated but we can adjust it anyway. 
+Step 1: Connect to the cluster, download three packages
+ 1: tmux: (today is Oct 3rd 2019) tmux version 2.9. Visit this website to get the latest version: https://github.com/tmux/tmux/wiki . Copy the link. Use wget or whatever fpt download tool you have. 
+ 2: libevent: Just use this link to download: https://libevent.org/
+ 3: ncurses (not sure why they named it this way, I pronouce it n curses *so weird*): use this link https://ftp.gnu.org/pub/gnu/ncurses/
+Step 2: Extract three packages. tar xvzf file.tar.gz
+Step 3: clear a directory to build your tmux into `mkdir -p $HOME/local $HOME/tmux_tmp`
+Step 4: Run series of command below: 
+		cd libevent extracted directory
+		./configure --prefix=$HOME/local --disable-shared
+		make
+		make install
+		cd ..
+
+		cd to ncurses extracted directory
+		./configure --prefix=$HOME/local
+		make
+		make install
+		cd ..
+
+		cd to tmux extracted directory
+		./configure CFLAGS="-I$HOME/local/include -I$HOME/local/include/ncurses" LDFLAGS="-L$HOME/local/lib -L$HOME/local/include/ncurses -L$HOME/local/include"
+		CPPFLAGS="-I$HOME/local/include -I$HOME/local/include/ncurses" LDFLAGS="-static -L$HOME/local/include -L$HOME/local/include/ncurses -L$HOME/local/lib" make
+		cp tmux $HOME/local/bin
+		# from this point you are good to use tmux local build. 
+
+
+Also I need to work on several a book chapter. I am reading a writing a section with interpretable DNNs. Several keywords to put on: Activation Maximization, Seliency Mapping, Occlusion sensitivity, Class model visualization and deconvolution. 
+
+
