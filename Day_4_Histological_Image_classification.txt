@@ -1,0 +1,2 @@
+Paper title Title: ARA: accurate, reliable and active histopathological image classifcation framework with Bayesian deep learning
+Link: https://www.nature.com/articles/s41598-019-50587-1.pdf 
