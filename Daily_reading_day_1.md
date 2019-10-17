@@ -6,7 +6,6 @@ This is a note that I made while reading and learning the style of writing from 
 
 ### Vocabulary
 
-```
 * omnipresent (adj): present and having an effect everywhere, (vietnamese) có mặt khắp nơi
 --* symnonym: all over the place, anywhere, everywhere.
 --* related: omnipresence (noun): the world has grown accustomed to the omnipresence of global brands
@@ -15,7 +14,7 @@ This is a note that I made while reading and learning the style of writing from 
 * osteoarthritis: (noun): a medical condition that causes stiffness and pain in the joints or muscles of the body. vietnamese: viêm khớp 
 
 --* 
-```
+
 
 ### Sentences
 
