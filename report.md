@@ -10,11 +10,8 @@
     
 |Executor | X
 |:-------|:-----
-
 |Contributor | Y 
-
 |Project | Z
-
 |Nature | Experiment-level
 |Goal| A
 |Deadline| (for Production) B
