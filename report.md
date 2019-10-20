@@ -8,9 +8,9 @@
 
 ---
     
-|Executor | Nathan
+|Executor | 
 |:-------|:-----
-|Contributor | Levi, Luke  
+|Contributor |  
 |Project | 
 |Nature | Experiment-level
 |Goal| 
