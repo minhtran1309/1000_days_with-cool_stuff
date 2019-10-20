@@ -8,14 +8,17 @@
 
 ---
     
-|Executor | 
+|Executor | X
 |:-------|:-----
-|Contributor |  
-|Project | 
+
+|Contributor | Y 
+
+|Project | Z
+
 |Nature | Experiment-level
-|Goal| 
-|Deadline| (for Production) 
-|Timeline| 
+|Goal| A
+|Deadline| (for Production) B
+|Timeline| C
 |Version history| 08/07 - 12/07 <br> Meta-learning and Few-shot learning <br><br> 15/07 - 19/07 <br> metric-based approach on Omniglot dataset <br> Start modifying MAML and metric-based approach 
 |Key progress| 22/07 - 26/07 <br> Continue with the implementation of MAML and metric-based approach for text classification
 
