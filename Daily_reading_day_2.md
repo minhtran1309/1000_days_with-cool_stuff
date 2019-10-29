@@ -1,4 +1,4 @@
-# [Paper title: ]A Brexit Deal in Hand, Boris Johnson Faces an Uphill Struggle in Parliament(https://www.nytimes.com/2019/10/17/world/europe/brexit-boris-johnson-eu.html?action=click&module=News&pgtype=Homepage)
+# [Paper title: A Brexit Deal in Hand, Boris Johnson Faces an Uphill Struggle in Parliament](https://www.nytimes.com/2019/10/17/world/europe/brexit-boris-johnson-eu.html?action=click&module=News&pgtype=Homepage)
 
 ## Getting Started
 
