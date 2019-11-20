@@ -1,0 +1,2 @@
+
+While using keras model.fit and observe the metric values. There could be some inconsistent between "mse loss" and "mse metric" dues to the fact that I used  kernel_regularizer and l1 or l2 as the regularizer. 
