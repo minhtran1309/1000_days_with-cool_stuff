@@ -8,7 +8,7 @@ List of features can be listed as follows:
 1. WSI viewing (alternative tool for Openslide)
 2. Biomarker quantification
 3. Tissue microarray support 
-   * dearraying of TMA, able to view related cores side-by-side
+    - dearraying of TMA, able to view related cores side-by-side
 4. Sophisticated tumor identification using tumor identification for applied to slides of interest - including slides stained for immune cells without the need to stain for a separate tumor marker.
 5. Flexible object classification
 6. Analysis and export report
