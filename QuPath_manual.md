@@ -24,9 +24,7 @@ List of features can be listed as follows:
   b. it has to be annotated in order to perform cell analysis/detection. Go to annotation tools, annotate some area of interest. 
   
   c. Get it work by selecting Analyze -> cell analysis -> positive cell dectection. In fact default values should be enough but it's alway good to learn more about the parameter. 
-    
     1. The **score compartment value of Nucleus: DAB OD means that the decision will be based on the average DAB (brown) staining within the nucleus.** -> **The other compartments are useful in cases where the biomarker of interest isn't localized to the nucleus.** 
-    
     2.   
   d. Hello World 
 
