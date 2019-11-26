@@ -25,9 +25,9 @@ List of features can be listed as follows:
   
   c. Get it work by selecting Analyze -> cell analysis -> positive cell dectection. In fact default values should be enough but it's alway good to learn more about the parameter. 
     
-    c.1. The *score compartment value of Nucleus: DAB OD means that the decision will be based on the average DAB (brown) staining within the nucleus.* -> *The other compartments are useful in cases where the biomarker of interest isn't localized to the nucleus*. 
+    1. The **score compartment value of Nucleus: DAB OD means that the decision will be based on the average DAB (brown) staining within the nucleus.** -> **The other compartments are useful in cases where the biomarker of interest isn't localized to the nucleus.** 
     
-    c.2.  
+    2.   
   d. Hello World 
 
 ### Sentences
