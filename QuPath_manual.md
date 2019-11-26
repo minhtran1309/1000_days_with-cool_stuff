@@ -16,13 +16,14 @@ List of features can be listed as follows:
 ### Analysis (the extension and manual annotation, counting cell are excluded due to out of analysis scope)
 
 1. Detecting Object (cell detection)
-  1.1. Abs: Manuallly drawing regions and counting object are cool but don't scale well to hadling large number of objects. The tool offers the capability to `detecting objects` with higher accuracy and less bias.
-  1.2 Step by step: 
-     a. Load the image (remember there is a step to select the image type, by default is `Not set` it must be `HE` or `Brightfiel (H-DAB)` in order to facilitate the object detection step)
-     b. it has to be annotated in order to perform cell analysis/detection. Go to annotation tools, annotate some area of interest. 
-     c. Get it work by selecting Analyze -> cell analysis -> positive cell dectection. In fact default values should be enough but it's alway good to learn more about the parameter. 
-       c.1. The "score compartment value of Nucleus: DAB OD means that the decision will be based on the average DAB (brown) staining within the nucleus." -> "The other compartments are useful in cases where the biomarker of interest isn't localized to the nucleus"
-     d. 
+
+        1.1. Abs: Manuallly drawing regions and counting object are cool but don't scale well to hadling large number of objects. The tool offers the capability to `detecting objects` with higher accuracy and less bias.
+        1.2 Step by step: 
+                a. Load the image (remember there is a step to select the image type, by default is `Not set` it must be `HE` or `Brightfiel (H-DAB)` in order to facilitate the object detection step)
+                b. it has to be annotated in order to perform cell analysis/detection. Go to annotation tools, annotate some area of interest. 
+                c. Get it work by selecting Analyze -> cell analysis -> positive cell dectection. In fact default values should be enough but it's alway good to learn more about the parameter. 
+                        c.1. The "score compartment value of Nucleus: DAB OD means that the decision will be based on the average DAB (brown) staining within the nucleus." -> "The other compartments are useful in cases where the biomarker of interest isn't localized to the nucleus"
+                d. Hello World 
 ---
 ### Sentences
 
