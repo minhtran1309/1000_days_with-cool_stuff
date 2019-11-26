@@ -24,8 +24,8 @@ List of features can be listed as follows:
     b. it has to be annotated in order to perform cell analysis/detection. Go to annotation tools, annotate some area of interest.
   
     c. Get it work by selecting Analyze -> cell analysis -> positive cell dectection. In fact default values should be enough but it's alway good to learn more about the parameter: 
-        * The **score compartment value of Nucleus: DAB OD means that the decision will be based on the average DAB (brown) staining within the nucleus.** -> **The other compartments are useful in cases where the biomarker of interest isn't localized to the nucleus.** 
-        * There are three different threshold below **Score Compartment** to adjust thresholds of color according to staining intensity which is useful for multiple intensity clssification.  
+          *  The **score compartment value of Nucleus: DAB OD means that the decision will be based on the average DAB (brown) staining within the nucleus.** -> **The other compartments are useful in cases where the biomarker of interest isn't localized to the nucleus.** 
+          * There are three different threshold below **Score Compartment** to adjust thresholds of color according to staining intensity which is useful for multiple intensity clssification.  
   
     d. After detection completed, select `Annotation` tab (next to tab Project and Image), there will be a detail information about the number of positive and negative cells dectected in the lower panel. 
   
