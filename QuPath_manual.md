@@ -1,5 +1,5 @@
 # [Tool name: QuPath](https://github.com/qupath/qupath)
----
+
 ## Getting Started
 
 QuPath is an open source software for WSI analysis and digital pathology
@@ -12,7 +12,7 @@ List of features can be listed as follows:
 4. Sophisticated tumor identification using tumor identification for applied to slides of interest - including slides stained for immune cells without the need to stain for a separate tumor marker.
 5. Flexible object classification
 6. Analysis and export report
----
+
 ### Analysis (the extension and manual annotation, counting cell are excluded due to out of analysis scope)
 
 1. Detecting Object (cell detection)
@@ -22,9 +22,10 @@ List of features can be listed as follows:
                 a. Load the image (remember there is a step to select the image type, by default is `Not set` it must be `HE` or `Brightfiel (H-DAB)` in order to facilitate the object detection step)
                 b. it has to be annotated in order to perform cell analysis/detection. Go to annotation tools, annotate some area of interest. 
                 c. Get it work by selecting Analyze -> cell analysis -> positive cell dectection. In fact default values should be enough but it's alway good to learn more about the parameter. 
-                        c.1. The "score compartment value of Nucleus: DAB OD means that the decision will be based on the average DAB (brown) staining within the nucleus." -> "The other compartments are useful in cases where the biomarker of interest isn't localized to the nucleus"
+                        c.1. The *score compartment value of Nucleus: DAB OD means that the decision will be based on the average DAB (brown) staining within the nucleus.* -> *The other compartments are useful in cases where the biomarker of interest isn't localized to the nucleus*. 
+                        c.2 
                 d. Hello World 
----
+
 ### Sentences
 
 
