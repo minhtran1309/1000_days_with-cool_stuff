@@ -36,10 +36,15 @@ List of features can be listed as follows:
 2. Step by step:
 
     a. Load the image (set type of the image to either `HE` or Brightfield `(H-DAB)` in orger to facilitate the object detection). Wait, why is object dectection?? Yea we want to detect object first and then build an object classification later. 
-    b. Use `Annotation tool` to create annotation as normal (rect, elipse. brush tool, etc, except line. 
+    
+    b. Use `Annotation tool` to create annotation as normal (rect, elipse. brush tool, etc, except line.
+    
     c. After annotations have been drawn (we need more than one), **must assign class to each annotation by right click to each annotation or by using `set class` button under `Annotation tab`**. Should notice the number increase inside each class (which means the number of cells inside all the annotation of this class).
+    
     d. Continue creating annotations and assigning their classes. 
+    
     e. Once we have sufficient number of annotations with different classes, it's time to create the classifier. Go to Classify -> Create detection classifier. Pressing `Build & Apply` will train up a classifier. That step will collect information from annotated classes to build a multple-class classifier. 
+    
     d. Press `CMD + l` to show command list, search for `detection classifier`. That step will open `Create detection classifier` press auto update. In the detail box we can see the classes are listed under classifier classes. There are a few classifying algorithms type we can pick to build a classifier such as `Random Trees (default), Decision Trees, KNNs or Neural Network`. 
 
 
