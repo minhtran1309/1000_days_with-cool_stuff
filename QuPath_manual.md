@@ -47,5 +47,10 @@ List of features can be listed as follows:
     
     d. Press `CMD + l` to show command list, search for `detection classifier`. That step will open `Create detection classifier` press auto update. In the detail box we can see the classes are listed under classifier classes. There are a few classifying algorithms type we can pick to build a classifier such as `Random Trees (default), Decision Trees, KNNs or Neural Network`. 
 
+### Scripting in v0.2.0
+1. To make a automative pipeline that can apply everywhere without problem we need script not GUI tools.
+2. What should know in advance?
+
+    * 
 
 
