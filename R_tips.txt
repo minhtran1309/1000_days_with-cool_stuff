@@ -12,4 +12,36 @@ library("myRPackage", lib.loc="/usr/me/local/R/library")
 #----------------------------------------
 install.packages("data.table", type = "binary")
 
-
+#------------------------------------------------------------------------
+#---------Install Seurat for single cell analysis on delta cluster-------
+#------------------------------------------------------------------------
+Step 1: load R module `module load R/3.6.2` and open Rstudio: `R`
+Step 2: install R devetools: `install.packages('devtools', loc='/shares/common/users/m.tran/R_packages')`
+Step 3: Run install Seurat
+install.packages('Seurat', lib='/shares/common/users/m.tran/R_packages')
+Output error may have is
+Warning messages:
+1: In install.packages("Seurat", lib = "/shares/common/users/m.tran/R_packages") :
+  installation of package 'RcppParallel' had non-zero exit status
+2: In install.packages("Seurat", lib = "/shares/common/users/m.tran/R_packages") :
+  installation of package 'uwot' had non-zero exit status
+3: In install.packages("Seurat", lib = "/shares/common/users/m.tran/R_packages") :
+  installation of package 'mutoss' had non-zero exit status
+4: In install.packages("Seurat", lib = "/shares/common/users/m.tran/R_packages") :
+  installation of package 'metap' had non-zero exit status
+5: In install.packages("Seurat", lib = "/shares/common/users/m.tran/R_packages") :
+  installation of package 'Seurat' had non-zero exit status
+Solved 1: 
+1.resolve the first one by running the commands: 'module unload gcc/5.2.0', `module load gcc/7.2.0` 
+2. Downd load RcppParallel package from CRAN website
+then go back to R and run the command:
+rinstall.packages("/shares/common/users/m.tran/RcppParallel_4.4.4.tar.gz", lib='/shares/common/users/m.tran/R_packages/', repos=NULL, type='source')
+Solved 2: 
+1. After installing RcppParallel, run the command:
+install.packages("uwot", lib='/shares/common/users/m.tran/R_packages/')
+Solved 3+4: 
+1. Install it through Biocmanager can help
+To tell R to use both CRAN and Bioconductor repos when installing packages, run the following command in R
+setRepositories(ind = 1:2)
+Solved 5: 
+Off course the last step is to rerun the command install.packages('Seurat', lib='/shares/common/users/m.tran/R_packages')
