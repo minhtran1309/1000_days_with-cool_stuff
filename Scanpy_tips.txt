@@ -1,0 +1,53 @@
+#-------------------------------------
+#------ Scanpy tips and tricks--------
+#-------------------------------------
+
+After installing Scanpy from github, following the tutorial page
+Script run in delta and cluster systems, 
+therefore the tips is designated to cluster
+
+`adata = sc.read_10x_ntx('path/to/10x/data', var_names='gene_symbols', cache=True)`
+Get the error
+```
+Unable to create file (file locking disabled on this file system
+ (use HDF5_USE_FILE_LOCKING environment variable to override)
+```
+Fix 1: 
+Run this following script
+`export HDF5_USE_FILE_LOCKING='FALSE'`
+#-------------------------------------------
+#----possible error while running trajectory inference---
+#---------------------------------------------
+sc.settings.set_figure_params(dpi=80, frameon=False, figsize=(3, 3)) 
+Error: not recognized figsize as param
+Solved:
+the version that I install doesn't have that param, removed it and the problem resolved
+
+adata = sc.datasets.paul15() 
+# to download data from server, that function promted the error 
+# No module named 'tqdm.auto'
+Solved: try with `pip install tqdm` first
+If the upper scripts doesn't work, try `pip install -U --ignore-installed tqdm`
+it solved my problem with the second script
+
+After that get the error 
+```
+Unable to create file (file locking disabled on this file system                    
+ (use HDF5_USE_FILE_LOCKING environment variable to override)
+```
+Solved 1: look at the solution on the top
+
+#run on laura data
+ValueError: `color` list need to be at least as long as `groups`/`node_labels` list.
+
+
+
+#--------------------------------------------------------------
+#------Converting Seurat Object to AnnData---------------------
+#---------Sceasy-----------------------------------------------
+library(Seurat)
+library(sceasy) 
+library(reticulate)
+use_condaenv('/shares/common/users/m.tran/envs/sc_packages/')
+day2_combat <- readRDS('/gpfs/gpfs01/imb/groups/Group-Nguyen/scGPS_carDiff/scGPS/Maika/Analysis/seurat/combined_day/data/Day2_')   
+
