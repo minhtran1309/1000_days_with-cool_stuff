@@ -33,15 +33,35 @@ Warning messages:
   installation of package 'Seurat' had non-zero exit status
 Solved 1: 
 1.resolve the first one by running the commands: 'module unload gcc/5.2.0', `module load gcc/7.2.0` 
-2. Downd load RcppParallel package from CRAN website
+2. Download RcppParallel package from CRAN website
 then go back to R and run the command:
-rinstall.packages("/shares/common/users/m.tran/RcppParallel_4.4.4.tar.gz", lib='/shares/common/users/m.tran/R_packages/', repos=NULL, type='source')
+install.packages("/shares/common/users/m.tran/RcppParallel_4.4.4.tar.gz", lib='/shares/common/users/m.tran/R_packages/', repos=NULL, type='source')
 Solved 2: 
 1. After installing RcppParallel, run the command:
 install.packages("uwot", lib='/shares/common/users/m.tran/R_packages/')
 Solved 3+4: 
-1. Install it through Biocmanager can help
+Run the R install BiocManger
+1. install.packages("BiocManager")
+2. Install it through Biocmanager can help
 To tell R to use both CRAN and Bioconductor repos when installing packages, run the following command in R
 setRepositories(ind = 1:2)
 Solved 5: 
 Off course the last step is to rerun the command install.packages('Seurat', lib='/shares/common/users/m.tran/R_packages')
+
+
+
+#----------------------------------------------------------
+#-------------Install sceasy package to covert seurat object to andata object---
+#----------------------------------------------------------
+Highly recommend to use conda packagae, when install sceasy,
+Create an envs to store R packages (it doesn't matter you have multiple R packages directory, just use the path to tell where to load the data, everything will be fine)1. Run 
+conda install -c bioconda r-sceasy
+conda install anndata
+conda install loompy
+2. Step 1 takes quite long to install r-sceasy since it requires a lot of dependencies, activate R environment and load the package sceasy
+library(sceasy)
+library(reticulate)
+--> it probably asks you to install reticulate
+install.packages('reticulate', lib='/shares/common/users/m.tran/R_packages')
+use_condaenv('EnvironmentName')
+
