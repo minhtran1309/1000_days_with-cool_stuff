@@ -2,6 +2,15 @@
 #------ R tips and tricks--------
 #--------------------------------
 # to install packages to directory
+# the is a file to tell which directory R will  install the packages called .Renviron
+# redirect to main directory and check it
+cd 
+touch .Renviron
+# modify the file
+vim .Renviron
+# put the directory you want to 
+R_LIBS="/shares/common/users/m.tran/R_packages"
+# save and close
 install.packages("RPackage", lib="/90days/s4596423/st_env")
 #load the package installed locally
 library("myRPackage", lib.loc="/usr/me/local/R/library")
@@ -33,7 +42,8 @@ Warning messages:
   installation of package 'Seurat' had non-zero exit status
 Solved 1: 
 1.resolve the first one by running the commands: 'module unload gcc/5.2.0', `module load gcc/7.2.0` 
-2. Download RcppParallel package from CRAN website
+2. Download RcppParallel package from CRAN website/link below
+https://cran.r-project.org/src/contrib/RcppParallel_4.4.4.tar.gz
 then go back to R and run the command:
 install.packages("/shares/common/users/m.tran/RcppParallel_4.4.4.tar.gz", lib='/shares/common/users/m.tran/R_packages/', repos=NULL, type='source')
 Solved 2: 
@@ -64,4 +74,43 @@ library(reticulate)
 --> it probably asks you to install reticulate
 install.packages('reticulate', lib='/shares/common/users/m.tran/R_packages')
 use_condaenv('EnvironmentName')
+
+
+
+#------------------------------------------------------
+#----------Run Seurat and Error log -------------------
+#------------------------------------------------------
+# when I tried to run UMap dimensonal reduction with
+
+seurat_obj <- RunUMAP(seurat_obj, dims = 1:10)
+
+got the error
+```
+Error in initialize_python(required_module, use_environment) : 
+Python shared library not found, Python bindings not loaded.
+```
+Resolve it by running
+library(reticulate)
+py_install("umap-learn")
+-->> doesn't work well
+Solution: 
+# point to python app the run the umap
+after importing the `reticulate`
+
+use_python("/90days/s4596423/envs/r_seurat/bin/python")
+
+if should work from now
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+
+
+seurat_obj <- RunUMAP(seurat_obj, dims = 1:10)
+
+Traceback:
+ 1: RcppParallel::setThreadOptions(numThreads = n_threads)
+ 2: uwot
+
+This error can occur if you install seurat in the conda environment yet install RcppParallel from package or CRan. 
+Solution run the below command, it will fix the crashing of R:
+`conda install r-rcppparallel -c conda-forge`
+
 
