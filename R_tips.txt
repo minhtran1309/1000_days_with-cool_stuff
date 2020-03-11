@@ -102,7 +102,7 @@ use_python("/90days/s4596423/envs/r_seurat/bin/python")
 if should work from now
 Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
 
-
+###########################################################################
 seurat_obj <- RunUMAP(seurat_obj, dims = 1:10)
 
 Traceback:
@@ -112,5 +112,50 @@ Traceback:
 This error can occur if you install seurat in the conda environment yet install RcppParallel from package or CRan. 
 Solution run the below command, it will fix the crashing of R:
 `conda install r-rcppparallel -c conda-forge`
+
+Go back to the directoy where you installed RcppParallel package and remove it. 
+Rerun the script and it should work from now
+###########################################################################
+VlnPlot(df, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
+
+Error
+OMP: Error #34: System unable to allocate necessary resources for OMP thread:
+OMP: System error #11: Resource temporarily unavailable
+OMP: Hint Try decreasing the value of OMP_NUM_THREADS.
+Aborted
+
+Solution: export OMP_NUM_THREADS=1
+
+############################################################################
+seurat_obj.markers %>% group_by(cluster) %>% top_n(n = 2, wt = avg_logFC)
+
+Error:
+Error in seurat_obj.markers %>% group_by(cluster) %>% top_n(n = 2, wt = avg_logFC) : 
+  could not find function "%>%"
+Solution:
+
+###########################################################################
+Possible error after installing seurat in conda environ
+
+Launch jupyter notebook requires R r-essential and all related r packages to be installed in the environment
+A possible error relates to /stringi.......
+
+Solution 
+In the terminal script, run the following command
+
+`conda install -c r r-stringi`
+
+Activate Rstudio
+
+install.packages(stringi)
+############################################################################
+Another possible error is: 
+Error: package or namespace load failed for ‘Seurat’ in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]):
+ namespace ‘rlang’ 0.3.4 is already loaded, but >= 0.4.0 is required
+
+Solution:
+In the terminal run
+conda install -c conda-forge r-rlang
+
 
 
