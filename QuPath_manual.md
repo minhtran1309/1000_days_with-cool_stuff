@@ -53,4 +53,17 @@ List of features can be listed as follows:
 
     * 
 
+### Manually Install QuPath
+1. Download JDK 14 from here : https://adoptopenjdk.net/releases.html?variant=openjdk14&jvmVariant=hotspot
+2. Unzip file `tar xzf OpenJDK14U-jdk_x64_mac_hotspot_14.0.2_12.tar.gz`
+3. Clone QuPath from github: `git clone https://github.com/qupath/qupath.git`
+4: Navigate to QuPath: `cd qupath`
+5: Try this first: `./gradlew clean build -Dorg.gradle.java.home=/Volumes/BiomedML/Projects/build/jdk-14.0.2+12/ createPackage`
+6: it's ok to see the error run this command twice: `./gradlew clean`
+7: additionally run this, just in case: `rm -rf .gradle`
+8: Finally: `./gradlew build -Dorg.gradle.java.home=/Volumes/BiomedML/Projects/build/jdk-14.0.2+12/Contents/Home/ createPackage --stacktrace`
+9: Should see this: `BUILD SUCCESSFUL in 6m 36s`
+
+
+
 
