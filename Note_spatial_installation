@@ -1,0 +1,33 @@
+Note:
+Don't create python environment then install R essential + r_base
+Create R environment first
+conda create -p /90days/s4596423/envs/spatial_analysis r-essentials r_base
+conda install python=3.6
+
+In conda
+conda install -c conda-forge r-base
+conda install -c r r-irkernel
+conda install -c r r-essentials
+conda install r-caret
+conda install -c conda-forge libblas
+
+In R:
+After install r-essentials
+install.packages('devtools', loc='/shares/common/users/m.tran/R_packages')
+install.packages("spatstat.data")
+install.packages("spatstat") -> solved the error 
+tried: 
+devtools::install_github("satijalab/seurat", ref = "spatial")
+
+
+error: 
+libopenblas.so.0: cannot open shared object file: No such file or director
+
+
+st learn
+conda create -n stlearn python=3.7
+conda install r r-base libopenblas r-elpigraph.r jupyterlab louvain
+pip install stlearn 
+solution
+conda install -c r r-cairo
+conda install -c anaconda libffi

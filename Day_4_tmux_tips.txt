@@ -1,0 +1,12 @@
+Jan 7th 2020
+
+Learned from today
+Tmux lost session. When log out of the ssh server, and log in back again. The running tmux session disappreared and could attach anylonger. 
+
+Goal
+Recover the lost session 
+run this command: `killall -10 tmux`
+don't worry about the message. 
+
+Achievement and Finished: 
+	1. Recovered lost session
