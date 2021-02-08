@@ -1,0 +1,11 @@
+Oct 8th 2019
+
+Goal
+1: In the morning, determine what ST analyses I should do for the given dataset
+	Document about how to extract st data will be attached to this git branch TO-Manual-180925, LP-Manual-180611_Full
+
+2: In the afternoon, finalize the book chapter that I am working on. 
+
+3: Read NYT for news
+
+Achievement and Finished
