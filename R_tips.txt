@@ -158,4 +158,35 @@ In the terminal run
 conda install -c conda-forge r-rlang
 
 
+##############################################################################
+Convert List of List to dataframe
 
+df_genes <- data.frame(sapply(all_genes,c))
+
+or 
+
+df_genes <- data.frame(t(sapply(all_genes,c)))
+
+#############################################################################
+biomartR tips
+human = useMart("ensembl", dataset = "hsapiens_gene_ensembl")
+mouse = useMart("ensembl", dataset = "mmusculus_gene_ensembl")
+For mouse
+Search by chr location 
+results <- getBM(attributes = c("hgnc_symbol","ensembl_gene_id", "chromosome_name", "start_position", "end_position"), 
+                 filters = c("chromosome_name", "start", "end"), 
+                 values = list(1, 3444821, 3445322), mart = mouse)
+
+Search by gene id
+results <- getBM(attributes = c('mgi_symbol',"ensembl_gene_id","chromosome_name", "start_position", "end_position"), 
+                 filters = c("mgi_symbol"),
+                 values = c('Xkr4','Gm19938'), mart = mouse)
+                 
+For human 
+Search by gene name, gene id
+results <- getBM(attributes = c('hgnc_symbol',"ensembl_gene_id","chromosome_name", "start_position", "end_position"), 
+                 filters = c("hgnc_symbol"),
+                 values = c('BRCA2'), mart = human)
+
+
+              
