@@ -189,4 +189,22 @@ results <- getBM(attributes = c('hgnc_symbol',"ensembl_gene_id","chromosome_name
                  values = c('BRCA2'), mart = human)
 
 
-              
+           
+ ---------------------------------------------------------------------------------
+ Seurat custom function to filter gene that express in less than certain number of cells (tested with Seurat 4):
+ FilterGenes <- function (object, min.value=1, min.cells = 0, genes = NULL) {
+  genes.use <- rownames(object)
+
+  if (!is.null(genes)) {
+    genes.use <- intersect(genes.use, genes)
+    subset_object <- object[genes.use, ]
+    return(subset_object)
+  } else if (min.cells > 0) {
+    num.cells <- Matrix::rowSums(GetAssayData(object = subset_stromal_1, slot = "counts") > min.value)
+    genes.use <- names(num.cells[which(num.cells >= min.cells)])
+    subset_object <- object[genes.use, ]
+    return(subset_object)
+  } else {
+    return(subset_object)
+  }
+}
