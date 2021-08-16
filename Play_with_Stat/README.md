@@ -3,7 +3,7 @@
  
 **Date:** 20210815
 
-### **Definition:** Usually, it's called Two-sample hypothesis tests or (split testing or bucket testing) where the samples are divided by the two cases in the experiment and they are compared to each others. A/B tests are useful for understanding whether variation which might affect a user's (#Optimizely.com).
+### **Definition:** Usually, it's called Two-sample hypothesis tests or (split testing or bucket testing) where the samples are divided by the two cases in the experiment and they are compared to each others. A/B tests are useful for understanding whether variation which might affect a user's [1](#Optimizely.com).
 
 ### **Strategy:** Randomly show to users two or more variants at random and statistical test the determine which variation is better for a given convention goal
 
