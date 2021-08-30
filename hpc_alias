@@ -1,0 +1,36 @@
+alias weiner="ssh -XYC @wiener.hpc.net.uq.edu.au"
+alias delta2="ssh -XYC @delta2.imb.uq.edu.au"
+alias tinaroo1="ssh -XYC @tinaroo1.rcc.uq.edu.au"
+alias tinaroo2="ssh -XYC @tinaroo2.rcc.uq.edu.au"
+alias awoonga="ssh -XYC @awoonga.qriscloud.org.au"
+
+mount_rdm() {
+sshfs -o allow_other @data.qriscloud.org.au:/data/$1 ~/RDMs/$1
+}
+unmount_rdm() {
+umount ~/RDM/$1
+}
+
+connect_jpnb1() {
+ssh -N -f -L 8889:$1:8889 @tinaroo1.rcc.uq.edu.au
+}
+
+connect_jpnb2() {
+ssh -N -f -L 8889:$1:8889 @tinaroo2.rcc.uq.edu.au
+}
+
+connect_jpnb3() {
+ssh -N -f -L 8890:$1:8890 @delta2.imb.uq.edu.au
+}
+
+connect_jpnb4() {
+ssh -N -f -L 8887:$1:8887 @wiener.hpc.net.uq.edu.au
+}
+
+connect_jpnb5() {
+ssh -N -f -L 8889:$1:8889 @awoonga.qriscloud.org.au
+}
+check_port() {
+lsof -i tcp:$1
+}
+
