@@ -1,0 +1,13 @@
+Hypothesis test
+https://support.minitab.com/en-us/minitab/18/help-and-how-to/statistics/basic-statistics/supporting-topics/basics/type-i-and-type-ii-error/
+https://www.itl.nist.gov/div898/handbook/prc/section1/prc13.htm
+
+
+
+Parametric vs non-parametric
+https://www.ibm.com/docs/vi/db2woc?topic=nonparametric-background
+https://www.ibm.com/docs/vi/db2woc?topic=nonparametric-usage
+https://www.youtube.com/watch?v=3bcYLj11uME&ab_channel=Atutor
+
+Additional
+http://www.biostathandbook.com/analysissteps.html
