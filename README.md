@@ -9,7 +9,4 @@ Bioinformaticians need to be really good at:
 5. statistical modeling 
 6. problem solving and some sanity check.
 7. communication
-
-Good note to practice, 
-
-It's always better to start your own business at university because it's less dangerous.
+.
