@@ -13,14 +13,14 @@ Note 1: Every cell in a same columns must have the same datatype. It makes an un
 
 *1. Basic query:* 
 
-	SELECT [column names] 
-	FROM [dataset.table_name]
+SELECT [column names] 
+FROM [dataset.table_name]
 
-	WHERE  # -> the query conditions
+WHERE  # -> the query conditions
 
-	limit 10 # -> similar to pd.Dataframe.head() and be used at very last of the query
+limit 10 # -> similar to pd.Dataframe.head() and be used at very last of the query
 
-	*Comparison operator*
+*Comparison operator*
 
 	```
 	Select year, year_rank, artist, song_name
@@ -33,9 +33,9 @@ Note 2: Single quote for String compare operator
 
 *2. Logical Operators:* 
 
-	Allow to query the data with conditions
+Allow to query the data with conditions
 
-    AND, OR, NOT: already familiar  
+AND, OR, NOT: already familiar  
 
     
     ```
@@ -58,11 +58,11 @@ Note 2: Single quote for String compare operator
     AND NOT year_rank > 20
     ```
 
-    The condions can combine together using parentheses
+The condions can combine together using parentheses
 
-    **LIKE** is a form of regex in SQL to search for a specified pattern. 
+**LIKE** is a form of regex in SQL to search for a specified pattern. 
 
-        `%` means zero, one multiple characters start or end with pattern
+`%` means zero, one multiple characters start or end with pattern
 
     ```
     /*Get al some where artist contains the word 'Taylor'*/
@@ -72,7 +72,6 @@ Note 2: Single quote for String compare operator
     ```
 
 
-
      ```
     /*Get al some where artist contains the word 'Taylor'*/
     Select *
@@ -80,9 +79,9 @@ Note 2: Single quote for String compare operator
     Where artist Like '%Taylor%'
     ```
 
-    Note 3: LIKE query is case sensitive, meaning it take upper case and lower case character strictly. 
+Note 3: LIKE query is case sensitive, meaning it take upper case and lower case character strictly. 
 
-    To ignore case sensitive use `ILIKE` instead
+To ignore case sensitive use `ILIKE` instead
 
 	```
     /*Get al some where artist contains the word 'Taylor' or 'taylor' */
@@ -91,7 +90,7 @@ Note 2: Single quote for String compare operator
     Where artist ILike '%taylor%'
     ```
 
-    To match pattern with one idividual character use `_`
+To match pattern with one idividual character use `_`
 
     ```
     /*Get al some where artist name starts with t/T and ends  character m/M */
@@ -100,7 +99,7 @@ Note 2: Single quote for String compare operator
     Where artist ILike 't_m'
     ```
 
-    **IN** given a list of values to query
+**IN** given a list of values to query
 
     ```
     -- Get all songs in Billboard top 3
@@ -108,7 +107,7 @@ Note 2: Single quote for String compare operator
     Where year_rank IN (1, 2, 3)
     ```
 
-  	**IN** can be combine with other to make exclusion list
+**IN** can be combine with other to make exclusion list
 
     ```
     -- Get all songs not belongs to Taylor Swift, Adele, User in 2012
@@ -117,7 +116,7 @@ Note 2: Single quote for String compare operator
     And artist NOT IN ('Taylor Swift', 'Adele', 'Usher')
     ```
 
-    **Between** select only rows within a given range
+**Between** select only rows within a given range
 
     ```
     Select * from tutorial.billboard_top_100_year_end
@@ -125,7 +124,7 @@ Note 2: Single quote for String compare operator
     and year_rank => 5 and year_rank <= 10
     ```
 
-    Between can be used to alter two condition and make the query more comprehesive
+Between can be used to alter two condition and make the query more comprehesive
 
     ```
     Select * from tutorial.billboard_top_100_year_end
@@ -133,7 +132,7 @@ Note 2: Single quote for String compare operator
     and year_rank BETWEEN 5 AND 10
     ```
 
-    **IS NULL** select row that contain no data  
+**IS NULL** select row that contain no data  
 
 
     ```
@@ -142,9 +141,9 @@ Note 2: Single quote for String compare operator
     Where artist is NULL
     ```
 
-    **ORDER BY** sort column data in ascending or descending order
+**ORDER BY** sort column data in ascending or descending order
 
-    Note 4: By default `Order By` sort the data by ascending order. Add DESC to the end to sort the descending order
+Note 4: By default `Order By` sort the data by ascending order. Add DESC to the end to sort the descending order
 
 
     ```
