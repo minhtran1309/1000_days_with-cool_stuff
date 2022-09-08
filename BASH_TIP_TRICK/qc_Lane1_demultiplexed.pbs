@@ -1,0 +1,28 @@
+#!/bin/bash
+#PBS -A UQ-IMB
+#PBS -N FASTQC_Lane1
+#PBS -l walltime=03:00:00
+#PBS -l select=1:ncpus=10:mem=64GB
+#PBS -e /30days/s4596423/FastQC_output/qc_19_05010_24_error.txt
+#PBS -o /30days/s4596423/FastQC_output/qc_19_05010_24_output.txt
+
+printf "Start Running\n"
+module load anaconda/5.2.0
+source activate /QRISdata/Q1287/Minh_envs/rnaseq_qc/
+printf "\nModule loaded and environment activated\n"
+
+basePath='/QRISdata/Q1287/MOAGR_RNASeq/00_sabre_demultiplexed_PE/Lane_1_samples/'
+outputPath='/30days/s4596423/FastQC_output/'
+
+for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+do 
+    dirname="${basePath}${i}/"
+    echo "${dirname}"
+    read1="$(ls ${dirname}*${i}_1.fq.gz)"
+    read2="$(ls ${dirname}*${i}_2.fq.gz)"
+    echo "${read1}" and "${read2}" and "${outputPath}"
+    runqc="$(fastqc ${dirname}*.fq.gz --outdir ${outputPath})"
+done
+printf "\nDone\n"
+
+

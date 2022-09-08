@@ -1,0 +1,37 @@
+#!/bin/bash
+#PBS -A UQ-IMB
+#PBS -N Alg_Lane4_combined
+#PBS -l walltime=14:00:00
+#PBS -l select=1:ncpus=10:mem=64GB
+#PBS -e /30days/s4596423/Algin_output/align_Lane4_0409_combined_error_2.txt
+#PBS -o /30days/s4596423/Algin_output/align_Lane4_0409_combined_output_2.txt
+
+printf "Start Running\n"
+module load anaconda/5.2.0
+source activate /QRISdata/Q1287/Minh_envs/rnaseq_qc/
+
+BASE='/QRISdata/Q1287/Minh_envs/Lane_4_combined/'
+OUTPUT='/QRISdata/Q1287/MOAGR_RNASeq/02_STAR_BAM_sabre_demultiplexed_combined/'
+GENOMEDIR='/QRISdata/Q1287/Minh_envs/reference_mm10/mm10/'
+GTFFILE='/QRISdata/Q1287/Minh_envs/reference_mm10/gencode.vM24.chr_patch_hapl_scaff.annotation.gtf'
+
+for i in 1 2 3 4 5 6 7
+do 
+    dirname="${BASE}"
+    echo "${dirname}"
+    read1="$(ls ${dirname}0409-${i}_*_R1.trimmed.fastq)"
+    #read2="$(ls ${dirname}0409-${i}_*_R2.trimmed.fastq)"
+    #echo "${read1}" and "${read2}" and "${OUTPUT}"
+    fn1="${read1##*/}"
+    #fn2="${read2##*/}"
+    fn1="${fn1%.fastq}"
+    #fn2="${fn2%.fastq}"
+    echo "${fn1}" 
+    #echo "${fn2}"
+    echo '----------------------'
+    run_star="$(STAR --runThreadN 12 --runMode alignReads --genomeDir ${GENOMEDIR} --readFilesIn ${read1} --outFileNamePrefix ${OUTPUT}${fn1}.03. --outSAMtype BAM SortedByCoordinate --outSAMunmapped Within --outFilterMatchNminOverLread 0.3 --outFilterScoreMinOverLread 0.3 --twopassMode Basic --sjdbGTFfile ${GTFFILE} 75 --quantMode GeneCounts)"
+
+done
+printf "\nDone\n"
+
+
